@@ -1,12 +1,20 @@
-<h1>Koala</h1>
-<p> The web application that is as useless as the animal it was named after.</p>
-
-<div>
-  <label>Text </label>
-  <input (input)="onInputText($event.target.value)" />
-  <button (click)="onClickReverse()" [disabled]="!text.length">Submit</button>
-</div>
-<br>
-<div>
-  Reversed Text: {{ reversedText }}
+<div class="col-6 mx-auto">
+  <div class="card mt-4">
+    <div class="card-header text-white bg-primary">Koala</div>
+    <div class="card-body">
+      <p>The web application that is as useless as the animal it was named after. 🐨</p>
+      <div class="form-group">
+        <label>Text</label>
+        <input (input)="onInputText($event.target.value)" class="form-control" />
+      </div>
+      <br>
+      <div class="form-group">
+        <button (click)="onClickReverse()" [disabled]="!text.length" class="btn btn-primary">Submit</button>
+      </div>
+      <br>
+      <div>
+        Reversed Text: {{ reversedText }}
+      </div>
+    </div>
+  </div>
 </div>
