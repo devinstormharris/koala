@@ -12,7 +12,7 @@
         <button (click)="onClickReverse()" [disabled]="!text.length" class="btn btn-primary">Submit</button>
       </div>
       <br>
-      <div>
+      <div *ngIf="reversedText.length">
         Reversed Text: {{ reversedText }}
       </div>
     </div>
